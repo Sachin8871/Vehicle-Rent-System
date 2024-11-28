@@ -1,0 +1,112 @@
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.Info {
+    background-color: #1a73e8;
+    position: fixed;
+    width: calc(100%);
+    height: 100px;
+    border: solid 3px yellow;
+    border-radius: 10px;
+    z-index: 10; /* Ensures it stays on top */
+}
+
+.cname {
+    margin: 0px 5px 10px 60px;
+    font-size: 35px;
+    color: rgba(255, 0, 0, 0.9);
+}
+
+.cemail {
+    margin: 25px 25px 25px 100px;
+    font-size: 15px;
+    color: yellow;
+}
+
+.table-name {
+    display: flex;
+}
+
+.table-name h2 {
+    color: rgb(76, 0, 255);
+    margin-left: 40px;
+}
+
+.table-name button {
+    margin-left: auto; /* Aligns the button to the right */
+}
+
+.vehicle-table {
+    width: 95%;
+    margin: 140px auto 20px; /* Adjust margin to provide space for the fixed header */
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #202124;
+    text-align: center;
+}
+
+.table {
+    margin: 100px;
+}
+
+.vehicle-table th, .vehicle-table td {
+    padding: 10px;
+    border: 1px solid #dadce0;
+}
+
+.vehicle-table th {
+    background-color: #1a73e8;
+    color: #fff;
+    font-weight: bold;
+}
+
+.vehicle-table tbody tr:nth-child(even) {
+    background-color: #f1f3f4;
+}
+
+.vehicle-table tbody tr:hover {
+    background-color: #e8f0fe;
+}
+
+img {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.table-name button {
+    width: 13%;
+    padding: 12px;
+    margin: 20px 40px; /* Adjust margin to suit your layout */
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #1a73e8;
+    background-color: #1a73e8;
+    color: white;
+}
+
+.logout {
+    position: absolute; /* Keep it positioned relative to the nearest positioned ancestor */
+    right: 20px; /* Position it on the right side of the header */
+    top: 20px; /* Adjust this to align vertically with the content in the Info section */
+    z-index: 11; /* Higher z-index than the .Info section to ensure it appears on top */
+}
+
+.logout a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.logout a:hover {
+    background-color: #c62828; /* Darker red on hover */
+}

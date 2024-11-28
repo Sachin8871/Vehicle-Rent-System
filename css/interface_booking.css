@@ -1,0 +1,86 @@
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.Info {
+    background-color: #1a73e8;
+    margin-top: 0px;
+    position: absolute;
+    width: calc(100%);
+    display: flex;
+    height: 100px;
+    position: fixed;
+    /* border: solid 3px yellow;
+    border-radius: 10px; */
+}
+
+.cname {
+    margin: 6px 5px 10px 60px;
+    font-size: 27px;
+    color: rgba(255, 0, 0, 0.9);
+}
+
+.cemail {
+    /* background-color: #202124; */
+    margin: 25px 25px 25px 1000px;
+    font-size: 20px;
+    color: yellow;
+}
+
+.cemail p {
+    margin: 0px;
+}
+
+.table-name {
+    display: flex;
+}
+
+.table-name h2 {
+    color: rgb(76, 0, 255);
+    margin-left: 40px;
+}
+
+.table-name button {
+    margin-left: 1090px;
+}
+
+.vehicle-table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    color:  #202124;
+    text-align: center;
+}
+
+.table {
+    margin: 100px;
+}
+
+.vehicle-table th, .vehicle-table td {
+    padding: 10px;
+    border: 1px solid #dadce0;
+}
+
+.vehicle-table th {
+    background-color: #1a73e8;
+    color: #fff;
+    font-weight: bold;
+}
+
+.vehicle-table tbody tr:nth-child(even) {
+    background-color: #f1f3f4;
+}
+
+.vehicle-table tbody tr:hover {
+    background-color: #e8f0fe;
+}
+
+img {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}

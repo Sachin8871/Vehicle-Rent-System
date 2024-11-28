@@ -1,0 +1,136 @@
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.Info {
+    background-color: #1a73e8;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    top: 0;
+}
+
+.cname {
+    font-size: 27px;
+    color: rgba(255, 0, 0, 0.9);
+}
+
+.cemail {
+    margin-left: 1050px;
+    font-size: 20px;
+    color: yellow;
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: flex-end; */
+}
+
+.content-row {
+    display: flex;
+    gap: 20px;
+    padding-top: 120px;
+    margin: 0 20px;
+}
+
+.table, .U1 {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #202124;
+    text-align: center;
+}
+
+.vehicle-table th, .vehicle-table td {
+    padding: 10px;
+    border: 1px solid #dadce0;
+}
+
+.vehicle-table th {
+    background-color: #1a73e8;
+    color: #fff;
+    font-weight: bold;
+}
+
+.vehicle-table tbody tr:nth-child(even) {
+    background-color: #f1f3f4;
+}
+
+.vehicle-table tbody tr:hover {
+    background-color: #e8f0fe;
+}
+
+img {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.login-container {
+    padding: 20px;
+    border: 1px solid #1a73e8;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #1a73e8;
+}
+
+button {
+    background-color: #1a73e8;
+    color: #fff;
+    cursor: pointer;
+}
+
+.datetime-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.datetime-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.datetime-group:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}

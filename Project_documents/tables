@@ -1,0 +1,77 @@
+CREATE TABLE Log_in(
+    email varchar(255) PRIMARY KEY,
+    password varchar(255),
+    category ENUM("user", "company")
+);
+
+CREATE TABLE User (
+    user_id varchar(10) PRIMARY KEY,
+    f_name varchar(255),
+    l_name varchar(255),
+    gender ENUM('M', 'F', 'T'),
+    age INTEGER(3),
+    email varchar(255),
+    contact_no varchar(15) NOT NULL,
+    license varchar(50) NOT NULL,
+    FOREIGN KEY (email) REFERENCES Log_in(email)
+);
+
+CREATE TABLE Company (
+    cid varchar(10) PRIMARY KEY,
+    name varchar(255),
+    email varchar(255),
+    location varchar(255),
+    contact_no INTEGER(10) NOT NULL UNIQUE,
+    FOREIGN KEY (email) REFERENCES Log_in(email)
+);
+
+CREATE TABLE Vehicle (
+    vid varchar(10),
+    cid varchar(10),
+    type ENUM('car', 'bike', 'scooty'),
+    no_of_wheel INTEGER(1),
+    no_of_seat INTEGER(2),
+    fuel ENUM('petrol', 'diesel'),
+    mileage FLOAT,
+    rent FLOAT,
+    img LONGBLOB,
+    no_of_vehicle INTEGER,
+    PRIMARY KEY (vid, cid),
+    FOREIGN KEY (cid) REFERENCES Company(cid)
+);
+
+CREATE TABLE Booking (
+    bid INTEGER(10) PRIMARY KEY AUTO_INCREMENT,
+    destination varchar(30),
+    start_time datetime,
+    end_time datetime,
+    total_cost FLOAT,
+    user_id varchar(10),
+    vid varchar(10),
+    origin varchar(255),
+    status ENUM('booked', 'complete','cancel'),
+    cid varchar,
+    FOREIGN KEY (user_id) REFERENCES User(user_id),
+    FOREIGN KEY (vid) REFERENCES Vehicle(vid)
+    FOREIGN KEY (cid) REFERENCES Vehicle(cid)
+    ON DELETE CASCADE
+) AUTO_INCREMENT=12300;
+
+CREATE TABLE Makes_booking (
+    user_id varchar(10),
+    bid INTEGER(10),
+    PRIMARY KEY (user_id, bid),
+    FOREIGN KEY (user_id) REFERENCES User(user_id),
+    FOREIGN KEY (bid) REFERENCES Booking(bid)
+    ON DELETE CASCADE
+);
+
+CREATE TABLE Payment (
+    transaction_id INTEGER(100) PRIMARY KEY AUTO_INCREMENT,
+    bank_name varchar(20),
+    type ENUM('initial', 'fine'),
+    date datetime,
+    bid INTEGER(10),
+    FOREIGN KEY (bid) REFERENCES Booking(bid)
+    ON DELETE CASCADE
+) AUTO_INCREMENT=23400;
